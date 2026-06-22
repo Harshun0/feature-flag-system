@@ -2,6 +2,17 @@
 
 A full-stack feature flag platform with a shared Node.js API and three independent React frontends for super admins, org admins, and end users.
 
+## Live Demo
+
+| App | URL |
+|---|---|
+| Super Admin App | https://byepo-super-admin-app.vercel.app |
+| Admin App | https://byepo-admin-app.vercel.app |
+| User App | https://byepo-user-app.vercel.app |
+| Backend API | https://feature-flag-system-r5w1.onrender.com |
+
+**Super Admin Credentials For Testing :** `admin@byepo.com` / `admin123`
+
 ## Project Structure
 
 ```
@@ -88,17 +99,20 @@ Open **http://localhost:5175** — check whether a feature is enabled (no auth r
 ## API Endpoints
 
 ### Super Admin
+
 - `POST /api/super-admin/login`
 - `GET /api/super-admin/organizations` (protected)
 - `POST /api/super-admin/organizations` (protected)
 - `GET /api/super-admin/organizations/public` (public)
 
 ### Org Admin Auth
+
 - `POST /api/auth/register`
 - `POST /api/auth/login`
 - `GET /api/auth/me` (protected)
 
 ### Feature Flags
+
 - `GET /api/flags` (org admin, scoped to JWT org)
 - `POST /api/flags` (org admin)
 - `PUT /api/flags/:id` (org admin)
